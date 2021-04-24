@@ -136,7 +136,7 @@ void vendor_load_properties()
     }
 
     /* Common properties*/
-    property_override("ro.build.description", "samsung/j6ltexx/j6lte:10/QP1A.190711.020/J600FNXXU7CTC8:user/release-keys");
+    property_override("ro.build.description", "samsung/j6ltexx/j6lte:10/RQ2A.210405.005/7181113/J600FNXXU7CTC8:user/release-keys");
     property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "j6lte");
 
     std::string device = GetProperty("ro.product.device", "");
