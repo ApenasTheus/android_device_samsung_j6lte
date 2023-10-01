@@ -28,9 +28,8 @@ LOCAL_SHARED_LIBRARIES := \
     libhidlbase \
     liblog \
     libutils \
-    android.hardware.biometrics.fingerprint@2.1 \
-    android.hardware.biometrics.fingerprint@2.2 \
-    android.hardware.biometrics.fingerprint@2.3
+    libhidltransport \
+    android.hardware.biometrics.fingerprint@2.1
 
 ifeq ($(TARGET_SEC_FP_CALL_NOTIFY_ON_CANCEL),true)
     LOCAL_CFLAGS += -DCALL_NOTIFY_ON_CANCEL
@@ -44,17 +43,8 @@ ifeq ($(TARGET_SEC_FP_CALL_CANCEL_ON_ENROLL_COMPLETION),true)
     LOCAL_CFLAGS += -DCALL_CANCEL_ON_ENROLL_COMPLETION
 endif
 
-ifeq ($(TARGET_SEC_FP_HAS_FINGERPRINT_GESTURES),true)
-    LOCAL_CFLAGS += -DHAS_FINGERPRINT_GESTURES
-endif
-
-ifeq ($(TARGET_SEC_FP_REQUEST_FORCE_CALIBRATE),true)
-    LOCAL_CFLAGS += -DREQUEST_FORCE_CALIBRATE
-endif
-
-LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.3-service.samsung-a3y17lte
-LOCAL_INIT_RC := android.hardware.biometrics.fingerprint@2.3-service.samsung-a3y17lte.rc
-LOCAL_VINTF_FRAGMENTS := android.hardware.biometrics.fingerprint@2.3-service.samsung-a3y17lte.xml
+LOCAL_MODULE := android.hardware.biometrics.fingerprint@2.1-service.samsung-a3y17lte
+LOCAL_INIT_RC := android.hardware.biometrics.fingerprint@2.1-service.samsung-a3y17lte.rc
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := samsung

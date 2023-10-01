@@ -54,7 +54,9 @@ PRODUCT_PACKAGES_ENG += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.samsung-a3y17lte
+    android.hardware.biometrics.fingerprint@2.1 \
+    android.hardware.biometrics.common \
+    android.hardware.biometrics.face@1.0
 
 # Fingerprint Permissions
 PRODUCT_COPY_FILES += \
